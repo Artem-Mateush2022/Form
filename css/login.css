@@ -1,0 +1,101 @@
+@import url(./reset.css);
+@import url(./normalize.css);
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    text-rendering: optimizeLegibility;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    background-color: #000;
+    color: #fff;
+}
+
+
+.form__wrap {
+    max-width: 350px;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.error {
+    max-width: 350px;
+    padding: 20px;
+    border: 1px solid #fff;
+    border-radius: 5px; 
+    color: red;
+}
+
+.form__name {
+    font-size: 20px;
+    margin: 20px 0;
+    color: #fff;
+}
+
+.input {
+    border: none;
+    border-bottom: 2px solid #c4c4c4;
+    outline: none;
+    width: calc(100% - 20px);
+    padding: 0 30px 5px 5px;
+    color: #fff;
+}
+
+.btn__sub {
+    padding: 5px 20px;
+    border-radius: 20px;
+    color: #fff;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+    margin: 20px auto 20px auto;
+    letter-spacing: 2px;
+    background-color: #fff;
+    transition: all .3s linear;
+}
+.btn__sub:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.register {
+    font-size: 15px;
+    color: #00e;
+}
+
+.register:hover {
+    text-decoration: underline;
+}
+
+.form__input {
+    position: relative;
+}
+.btn__pass img {
+    width: 20px;
+    height: 20px;
+}
+.form__input.active .btn__pass::after {
+    opacity: 0;
+}
+.btn__pass {
+    position: absolute;
+    right: 16px;
+    top: 2px;
+    cursor: pointer;
+}
+.btn__pass::after {
+    content: "";
+    width: 22px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: -1px;
+    top: 9px;
+    transform: rotate(45deg);
+    opacity: 1;
+    transition: opacity .3s all ease;
+}
+

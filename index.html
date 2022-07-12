@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+    <div align="center" >
+        <div class="error">
+            {% if error_message %}
+            <p>{{ error_message }}</p>
+            {% end %}
+        </div>
+        <div class="form__wrap">
+            <form class="form" method="POST"> <!-- action="/login"  -->
+                <p class="form__name">Login:</p>
+                <p><input class="input" name="login" placeholder="Login"></p>
+                <p class="form__name">Password:</p>
+                <div class="form__input">
+                    <input class="input input__wrapper" type="password" name="password" placeholder="Password">
+                    <div class="btn__pass"><img src="./img/eye.svg" alt="eye"></div>
+                </div>
+                <p><input class="btn__sub" type="submit" value="Login"></p>
+            </form>
+            <a class="register" href="/register">Register</a>
+        </div>
+    </div>
+    <script src="./js/login.js"></script>
+</body>
+</html>
